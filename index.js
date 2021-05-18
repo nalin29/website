@@ -7,6 +7,7 @@
  
 const express = require("express");
 const path = require("path");
+const fs = require('fs');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const sendGridTransport = require('nodemailer-sendgrid-transport');
@@ -19,6 +20,7 @@ const dotenv = require('dotenv')
  dotenv.config();
 
  const app = express();
+
  const port = process.env.PORT || "8000";
 
  const sendgridOptions = {
