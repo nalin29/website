@@ -1,0 +1,28 @@
+{
+  "name": "whatabyte-portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ui": "browser-sync start --config bs-config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "nodemailer": "^6.6.0",
+    "nodemailer-mailgun-transport": "^2.1.3",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "pug": "^3.0.2"
+  }
+}

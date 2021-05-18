@@ -1,0 +1,146 @@
+doctype html
+head
+  title Nalin Mahajan Website
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  link(rel='stylesheet' href='assets/css/main.css')
+// Header
+#header
+  .top
+    // Logo
+    #logo
+      span.image.avatar48
+        img(src='images/avatar.jpg' alt='')
+      h1#title Nalin Mahajan
+      p Computer Science Student
+    // Nav
+    nav#nav
+      ul
+        li
+          a#top-link(href='#top')
+            span.icon.solid.fa-home Intro
+        li
+          a#portfolio-link(href='#portfolio')
+            span.icon.solid.fa-th Portfolio
+        li
+          a#about-link(href='#about')
+            span.icon.solid.fa-user About Me
+        li
+          a#contact-link(href='#contact')
+            span.icon.solid.fa-envelope Contact
+  .bottom
+    // Social Icons
+    ul.icons
+      li
+        a.icon.brands.fa-github(href='https://github.com/nalin29')
+          span.label Github
+      li 
+        a.icon.brands.fa-linkedin(href='https://www.linkedin.com/in/nalin-mahajan-b7b449183')
+         span.label LinkedIn
+      li
+        a.icon.solid.fa-envelope(href=' mailto: nalinmahajan@outlook.com')
+          span.label Email
+// Main
+#main
+  // Intro
+  section#top.one.dark.cover
+    .container
+      header
+        h2.alt
+          | Hi! I&apos;m 
+          strong Nalin Mahajan
+          | .
+        p
+          | &quot; Anything one man can imagine
+          br
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;other men can make real.&quot; 
+          br
+          | &mdash;Jules Vernes
+
+      footer
+        a.button.scrolly(href='resume.pdf') Resume/CV
+  // Portfolio
+  section#portfolio.two
+    .container
+      header
+        h2 Portfolio
+      p
+        | As an aspiring Computers Scientists. I have had the pleasure of working on many different
+        | projects. Some of them as part of my work at the University of Texas others simply to learn
+        | new skills. I have worked with various topics such as machine learning, openCV, Unity, Node.JS
+        | and many other technologies.
+      .row
+        .col-4.col-12-mobile
+          article.item
+            a.image.fit(href='https://github.com/nalin29/Fruit-Classification-Project')
+              img(src='images/fruitClassifier.png' alt='')
+            header
+              h3 CNN Fruit Classifier
+          article.item
+            a.image.fit(href='#')
+              img(src='images/vr.jpg' alt='')
+            header
+              h3 VR Hallway Experiment
+          article.item
+            a.image.fit(href='#')
+              img(src='images/website.jpg' alt='')
+            header
+              h3 This Website!!!
+        .col-4.col-12-mobile
+          article.item
+            a.image.fit(href='https://github.com/HackTX-2020-CookEm')
+              img(src='images/potluck.jpg' alt='')
+            header
+              h3 PotLuck A Hackathon App
+        .col-4.col-12-mobile
+          article.item
+            a.image.fit(href='https://github.com/nalin29/compress_point_cloud')
+              img(src='images/compression_node.png' alt='')
+            header
+              h3 Point Cloud Stream Compression
+          article.item
+            a.image.fit(href='https://www.firstinspires.org/robotics/frc')
+              img(src='images/frc.png' alt='')
+            header
+              h3 First Robotics Competition 
+  // About Me
+  section#about.three
+    .container
+      header
+        h2 About Me
+      a.image.featured(href='#about')
+        img(src='images/ut.jpg' alt='')
+      p
+        | Currently a CS student at UT who is interested in solving the problems of today and tomorrow in the digital sphere. 
+        | I am motivated and willing to quickly learn on the fly. 
+        | I am also proactive taking full advantage of my free time by gaining new skills or perusing avenues of interest. 
+        | Currently, I am interested in Machine Learning with an emphasis on Deep Learning.
+  // Contact
+  section#contact.four
+    .container
+      header
+        h2 Contact
+      p
+        | If you want to contact me just send an email I would love to talk.
+        br         
+        | Hopefully, it won't get sent to junk JK :p.
+      form(action='/contactform' method='POST')
+        .row
+          .col-6.col-12-mobile
+            input(type='text' name='name' placeholder='Name')
+          .col-6.col-12-mobile
+            input(type='email' name='email' placeholder='Email')
+          .col-12
+            textarea(type='text' name='message' placeholder='Message')
+          .col-12
+            input(type='submit' value='Send Message')
+// Footer
+#footer
+// Scripts
+script(src='assets/js/jquery.min.js')
+script(src='assets/js/jquery.scrolly.min.js')
+script(src='assets/js/jquery.scrollex.min.js')
+script(src='assets/js/browser.min.js')
+script(src='assets/js/breakpoints.min.js')
+script(src='assets/js/util.js')
+script(src='assets/js/main.js')
