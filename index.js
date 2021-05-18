@@ -11,7 +11,8 @@ const fs = require('fs');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const sendGridTransport = require('nodemailer-sendgrid-transport');
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
+const https = require('https');
 
 /**
  * App Variables
@@ -81,14 +82,11 @@ const dotenv = require('dotenv')
   }
 
  });
-
-
-/**
- * Server Activation
- */
-
- app.listen(port, () => {
-
-   console.log(`Listening to requests on http://localhost:${port}`);
-
+ 
+ https.createServer ({
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.cert')
+ } ,app)
+ .listen(port, () => {
+   console.log('listening on port 8000!');
  });
