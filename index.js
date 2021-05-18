@@ -47,33 +47,38 @@ const dotenv = require('dotenv')
  */
 
  app.get("/", (req, res) => {
-
    res.render("index", {title: "Home"});
-
  });
 
  app.post("/contactform", (req, res) => {
    console.log('Data:', req.body);
+
+   if(req.body.name == '' || req.body.email =='' || req.body.message ==''){
+     console.log('empty form');
+     res.render("messageFailure", {title: "Home"});
+   }
+   else{
    
-   const smtpTrans = nodemailer.createTransport(sendgridOptions);
+    const smtpTrans = nodemailer.createTransport(sendgridOptions);
 
-   const mailOpts = {
-      from: process.env.SENDGRID_EMAIL, // This is ignored by Gmail
-      to: process.env.REC_EMAIL,
-      subject: 'New message from contact form at my website',
-      text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
-   };
+    const mailOpts = {
+        from: process.env.SENDGRID_EMAIL, // This is ignored by Gmail
+        to: process.env.REC_EMAIL,
+        subject: 'New message from contact form at my website',
+        text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
+    };
 
-   smtpTrans.sendMail(mailOpts, (error, response) => {
-   if (error) {
-      console.log(error); // Show a page indicating failure
-      res.json({message: 'Message failed!'});
-   }
-   else {
-      console.log(response);
-      res.json({message: 'Message received!'});
-   }
-   });
+    smtpTrans.sendMail(mailOpts, (error, response) => {
+    if (error) {
+        console.log(error); // Show a page indicating failure
+        res.render("messageFailure", {title: "Home"});
+    }
+    else {
+        console.log(response);
+        res.render("messageReceived", {title: "received"});
+    }
+    });
+  }
 
  });
 
