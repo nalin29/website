@@ -8,4 +8,4 @@ The website is hosted using GCP. The setup uses a first entry point through a lo
 These load balancers will autodirect http requests to https in addition they will then assign traffic to the priority group with auto scaling for instances.
 Then an nginx reverse proxy will redirect traffic to the express server running on node.js.
 
-See the final [result] (https://nalinmahajan.com)
+See the final result at: (https://nalinmahajan.com)
