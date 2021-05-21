@@ -1,0 +1,118 @@
+doctype html
+head
+  title Nalin Mahajan Website
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  link(rel='stylesheet' href='assets/css/main.css')
+  link(rel='apple-touch-icon' sizes='152x152' href='images/apple-touch-icon.png')
+  link(rel='icon' type='image/png' sizes='32x32' href='images/favicon-32x32.png')
+  link(rel='icon' type='image/png' sizes='16x16' href='images/favicon-16x16.png')
+// Header
+#header
+  .top
+    // Logo
+    #logo
+      span.image.avatar48
+        img(src='images/avatar.jpg' alt='')
+      h1#title Nalin Mahajan
+      p Computer Science Student
+    // Nav
+    a(href="/" class ='previous') &#8249; Back To Site
+    nav#nav
+      ul
+        li
+          a#top-link(href='#intro')
+            span.icon.solid.fa-th Overview
+        li
+          a#portfolio-link(href='#tech')
+            span.icon.solid.fa-th Custom CNN Model
+        li
+          a#portfolio-link(href='#show')
+            span.icon.solid.fa-th Transfer Model
+  .bottom
+    // Social Icons
+    ul.icons
+      li
+        a.icon.brands.fa-github(href='https://github.com/nalin29')
+          span.label Github
+      li 
+        a.icon.brands.fa-linkedin(href='https://www.linkedin.com/in/nalin-mahajan-b7b449183')
+         span.label LinkedIn
+      li
+        a.icon.solid.fa-envelope(href=' mailto: nalinmahajan@outlook.com')
+          span.label Email
+// Main
+#main
+  // Intro
+  // Portfolio
+  section#intro.two
+    .container
+      header
+        h2 CNN Fruit Classifier
+      p(align= "justify")
+        | Exploration into CNN classification using the Keras API and fruit-360 dataset from Kaggle.
+        | In this project using the Tensorflow Keras API I create a series of CNN models and 
+        | evaluated the best one on the Fruit-360 dataset from Kaggle which contains 131 fruits and vegetables to classify. 
+        | In addition I implement the 3 best models into the pytorch framework.
+        | Ultimately the best model was a transfer learning model based on pretrained weights from ResNet50.
+        | The python notebook is located in my git repo: 
+        a(href="https://github.com/nalin29/Fruit-Classification-Project") https://github.com/nalin29/Fruit-Classification-Project
+  // About Me
+  section#tech.three
+    .container
+      header
+        h2 Custom CNN Model
+      p(align="justify")
+        | A custom model that was settled is a 4 layer convolutional network with 2 fully conntected layers.
+        | The leaky RELU Activation function was used and trained using dropout to regularize.
+      article.item
+        a.image.fit(href='https://github.com/nalin29/Fruit-Classification-Project')
+          img(src='https://raw.githubusercontent.com/nalin29/Fruit-Classification-Project/master/Images/confusion_matrix1.png' alt='')
+        header
+          h3 Confusion Matrix
+      article.item
+        a.image.fit(href='https://github.com/nalin29/Fruit-Classification-Project')
+          img(src='https://github.com/nalin29/Fruit-Classification-Project/blob/master/Images/plot_data1.png?raw=true' alt='')
+        header
+          h3 Loss/Accuracy per Epoch
+      article.item
+        a.image.fit(href='https://github.com/nalin29/Fruit-Classification-Project')
+          img(src='https://github.com/nalin29/Fruit-Classification-Project/blob/master/Images/test_images1.png?raw=true' alt='')
+        header
+          h3 Test Image Batch
+  // Contact
+  section#show.four
+    .container
+      header
+        h2 Transfer Model
+      p(align="justify")
+        | Transfer Learning is done on ResNet50 pretrained on Imagenet. 
+        | The features computed by ResNet is average pooled and passed into two fully connected layers
+        | where softmax layer outputs predictions.
+      .col-4.col-12-mobile
+        article.item
+          a.image.fit(href='https://github.com/nalin29/Fruit-Classification-Project')
+            img(src='https://raw.githubusercontent.com/nalin29/Fruit-Classification-Project/master/Images/confusion_matrix2.png' alt='')
+          header
+            h3 Confusion Matrix
+        article.item
+          a.image.fit(href='https://github.com/nalin29/Fruit-Classification-Project')
+            img(src='https://github.com/nalin29/Fruit-Classification-Project/blob/master/Images/data_plot2.png?raw=true' alt='')
+          header
+            h3 Loss/Accuracy per Epoch
+        article.item
+          a.image.fit(href='https://github.com/nalin29/Fruit-Classification-Project')
+            img(src='https://raw.githubusercontent.com/nalin29/Fruit-Classification-Project/master/Images/test_images2.png' alt='')
+          header
+            h3 Test Image Batch
+      
+// Footer
+#footer
+// Scripts
+script(src='assets/js/jquery.min.js')
+script(src='assets/js/jquery.scrolly.min.js')
+script(src='assets/js/jquery.scrollex.min.js')
+script(src='assets/js/browser.min.js')
+script(src='assets/js/breakpoints.min.js')
+script(src='assets/js/util.js')
+script(src='assets/js/main.js')

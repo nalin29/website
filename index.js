@@ -50,6 +50,10 @@ const dotenv = require('dotenv');
    res.render("index", {title: "Home"});
  });
 
+ app.get("/project1", (req, res) => {
+    res.render("project1", {title: "Project1"});
+ });
+
  app.post("/contactform", (req, res) => {
    console.log('Data:', req.body);
 
@@ -62,7 +66,7 @@ const dotenv = require('dotenv');
     const smtpTrans = nodemailer.createTransport(sendgridOptions);
 
     const mailOpts = {
-        from: process.env.SENDGRID_EMAIL, // This is ignored by Gmail
+        from: process.env.SENDGRID_EMAIL,
         to: process.env.REC_EMAIL,
         subject: 'New message from contact form at my website',
         text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
