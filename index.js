@@ -54,6 +54,10 @@ const dotenv = require('dotenv');
     res.render("project1", {title: "Project1"});
  });
 
+ app.get("/project2", (req, res) => {
+  res.render("project2", {title: "Project1"});
+});
+
  app.post("/contactform", (req, res) => {
    console.log('Data:', req.body);
 
