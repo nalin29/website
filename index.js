@@ -55,7 +55,11 @@ const dotenv = require('dotenv');
  });
 
  app.get("/project2", (req, res) => {
-  res.render("project2", {title: "Project1"});
+  res.render("project2", {title: "Project2"});
+});
+
+app.get("/project3", (req, res) => {
+  res.render("project3", {title: "Project3"});
 });
 
  app.post("/contactform", (req, res) => {

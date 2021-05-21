@@ -1,0 +1,94 @@
+doctype html
+head
+  title Nalin Mahajan Website
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  link(rel='stylesheet' href='assets/css/main.css')
+  link(rel='apple-touch-icon' sizes='152x152' href='images/apple-touch-icon.png')
+  link(rel='icon' type='image/png' sizes='32x32' href='images/favicon-32x32.png')
+  link(rel='icon' type='image/png' sizes='16x16' href='images/favicon-16x16.png')
+// Header
+#header
+  .top
+    // Logo
+    #logo
+      span.image.avatar48
+        img(src='images/avatar.jpg' alt='')
+      h1#title Nalin Mahajan
+      p Computer Science Student
+    // Nav
+    a(href="/" class ='previous') &#8249; Back To Site
+    nav#nav
+      ul
+        li
+          a#top-link(href='#intro')
+            span.icon.solid.fa-th Overview
+        li
+          a#portfolio-link(href='#tech')
+            span.icon.solid.fa-th Tech
+        li
+          a#portfolio-link(href='#show')
+            span.icon.solid.fa-th Results
+  .bottom
+    // Social Icons
+    ul.icons
+      li
+        a.icon.brands.fa-github(href='https://github.com/nalin29')
+          span.label Github
+      li 
+        a.icon.brands.fa-linkedin(href='https://www.linkedin.com/in/nalin-mahajan-b7b449183')
+         span.label LinkedIn
+      li
+        a.icon.solid.fa-envelope(href=' mailto: nalinmahajan@outlook.com')
+          span.label Email
+// Main
+#main
+  // Intro
+  // Portfolio
+  section#intro.two
+    .container
+      header
+        h2 VR Hallway Experiment
+      p(align= "justify")
+        | This an ongoing research project conducted by the BWI lab at UT.
+        | The goal of this experiment is to follow up on the results of a previous project 
+        | that identified gaze as one of the earliest and most accurate indicators of where a person might move.
+        | The goal of this experiment is to identify and log the gaze cues when two people pass each other.
+        | Then using this data extrapolate gaze correlation with movement and if possible try to train
+        | a virtual agent such that it can read the gaze cues of a person in the VR environment and 
+        | clone the behavior of a normal human.
+  // About Me
+  section#tech.three
+    .container
+      header
+        h2 Technology
+      p(align="justify")
+        | The VR environment is built in UNITY.
+        | An HTC-VIVE is used as the primary vr set due to its integrated gaze tracking.
+        | The environment consists of a rigged model that uses the Sranipal Framework to move
+        | the eye models to the appropiate location given the gaze of a human.
+        | Then to provide full body Motion a full body solver provided throught the Final IK
+        | package is used since it provides an accurate represnetation of real life movements.
+      article.item
+        a.image.fit(href='#')
+          img(src='images/vr.jpg' alt='')
+        header
+          h3 Full Body Tracking Demo
+  // Contact
+  section#show.four
+    .container
+      header
+        h2 Results
+      p(align="justify")
+        | This is in progress. Check Back Later this Summer to see the results of the experiments.
+      
+// Footer
+#footer
+// Scripts
+script(src='assets/js/jquery.min.js')
+script(src='assets/js/jquery.scrolly.min.js')
+script(src='assets/js/jquery.scrollex.min.js')
+script(src='assets/js/browser.min.js')
+script(src='assets/js/breakpoints.min.js')
+script(src='assets/js/util.js')
+script(src='assets/js/main.js')
