@@ -62,6 +62,10 @@ app.get("/project3", (req, res) => {
   res.render("project3", {title: "Project3"});
 });
 
+app.get("/project4", (req, res) => {
+  res.render("project4", {title: "Project3"});
+});
+
  app.post("/contactform", (req, res) => {
    console.log('Data:', req.body);
 

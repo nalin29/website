@@ -1,0 +1,95 @@
+doctype html
+head
+  title Nalin Mahajan Website
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  link(rel='stylesheet' href='assets/css/main.css')
+  link(rel='apple-touch-icon' sizes='152x152' href='images/apple-touch-icon.png')
+  link(rel='icon' type='image/png' sizes='32x32' href='images/favicon-32x32.png')
+  link(rel='icon' type='image/png' sizes='16x16' href='images/favicon-16x16.png')
+// Header
+#header
+  .top
+    // Logo
+    #logo
+      span.image.avatar48
+        img(src='images/avatar.jpg' alt='')
+      h1#title Nalin Mahajan
+      p Computer Science Student
+    // Nav
+    a(href="/" class ='previous') &#8249; Back To Site
+    nav#nav
+      ul
+        li
+          a#top-link(href='#intro')
+            span.icon.solid.fa-th Overview
+        li
+          a#portfolio-link(href='#tech')
+            span.icon.solid.fa-th Hosting
+        li
+          a#portfolio-link(href='#show')
+            span.icon.solid.fa-th Results
+  .bottom
+    // Social Icons
+    ul.icons
+      li
+        a.icon.brands.fa-github(href='https://github.com/nalin29')
+          span.label Github
+      li 
+        a.icon.brands.fa-linkedin(href='https://www.linkedin.com/in/nalin-mahajan-b7b449183')
+         span.label LinkedIn
+      li
+        a.icon.solid.fa-envelope(href=' mailto: nalinmahajan@outlook.com')
+          span.label Email
+// Main
+#main
+  // Intro
+  // Portfolio
+  section#intro.two
+    .container
+      header
+        h2 Website
+      p(align= "justify")
+        | In order to learn more about web development and boost my online presence 
+        | I have created this website from scratch. The website itself uses an html 
+        | template that was provided copywrite free from HTML5UP which has then been
+        | converted to pugjs by me and then the CSS design has been tweaked slightly.
+        | The website uses nodejs as a web server and serves content using an express 
+        | middleware. The website is dynamically rendered using pugjs. In addition the
+        | contact system below uses the nodemailer library to send e-mails and 
+        | Send-Grid is the email service provider.
+  // About Me
+  section#tech.three
+    .container
+      header
+        h2 Hosting
+      p(align="justify")
+        | The website is currently hosting through the Google Cloud Platform. 
+        | This website is run as a compute engine instance as part of an instance group.
+        | This instance group can be accessed through an https load balancer that will intercept
+        | ssl traffic and create an internal route to the instances while balancing the load on each instance.
+        | An http load balancer re-routes http requests to https.
+        | On the instance itself an nginx reverse proxy is utilized to direct traffic to the appropiate port.  
+      article.item
+        a.image.fit(href='https://cloud.google.com/load-balancing/images/ilb-l7-tiers.svg')
+          img(src='https://cloud.google.com/load-balancing/images/ilb-l7-tiers.svg' alt='')
+        header
+          h3 Example of GCP Setup
+  // Contact
+  section#show.four
+    .container
+      header
+        h2 Results
+      p(align="justify")
+        | To see the results just take an interactive tour around my website!!
+      
+// Footer
+#footer
+// Scripts
+script(src='assets/js/jquery.min.js')
+script(src='assets/js/jquery.scrolly.min.js')
+script(src='assets/js/jquery.scrollex.min.js')
+script(src='assets/js/browser.min.js')
+script(src='assets/js/breakpoints.min.js')
+script(src='assets/js/util.js')
+script(src='assets/js/main.js')
